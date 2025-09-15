@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Abdillah Toihiri Mohamed</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin:0; padding:0;
+      background:#f4f6f9;
+      color:#333;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration:none; color:#1E90FF; transition: color 0.3s; }
+    a:hover { color: #ff6347; }
+    h1,h2,h3 { margin:0.5rem 0; }
+
+    header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color:white; text-align:center; padding:3rem 1rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1{
+      font-size:2.5rem; 
+      letter-spacing:1px;
+    }
+    header p.titre-professionnel {
+      font-size:1.5rem; /* légèrement plus petit que le prénom */
+      font-weight: bold; /* gras */
+      margin-top:0.5rem;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+    nav { margin-top:1rem; }
+    nav a{
+      margin:0 15px; padding:8px 12px; border-radius:5px;
+      transition:0.3s; background: rgba(255,255,255,0.2); color:white;
+    }
+    nav a:hover { background: rgba(255,255,255,0.5); transform: translateY(-2px); }
+
+    section { padding:3rem 1rem; max-width:1000px; margin:auto; }
+    section h2{
+      text-align:center; font-size:2rem; margin-bottom:2rem;
+      position: relative;
+      color: #1cc88a;
+    }
+    section h2::after{
+      content:'';
+      display:block;
+      width:60px; height:4px; background:#4e73df;
+      margin:0.5rem auto 0; border-radius:2px;
+    }
+
+    #apropos { background:#e0f7fa; }
+    #projets { background:#ffebee; }
+    #experience { background:#e0f7fa; }
+    #formations { background:#ffebee; }
+    #competences { background:#e0f7fa; }
+    #contacts { background:#ffcccb; }
+
+    .card {
+      background: linear-gradient(135deg, #ffffff, #f1f8ff);
+      padding:1.5rem; margin-bottom:1.5rem;
+      border-radius:12px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover{
+      transform: translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    #contacts a{
+      display:inline-block;
+      background: #4e73df;
+      color:white;
+      padding:10px 20px;
+      border-radius:6px;
+      margin-top:0.5rem;
+      transition: background 0.3s;
+    }
+    #contacts a:hover{ background:#1cc88a; }
+
+    @media(max-width:600px){
+      header h1{ font-size:2rem; }
+      header p.titre-professionnel{ font-size:1.2rem; }
+      nav a{ display:block; margin:8px 0; }
+      .card{ text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abdillah Toihiri Mohamed</h1>
+  <p class="titre-professionnel">Ingénieur junior en Electronique RadioFréquence et Télécommunications</p>
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#projets">Projets académiques</a>
+    <a href="#experience">Expériences professionnelles</a>
+    <a href="#formations">Formations</a>
+    <a href="#competences">Compétences & Atouts</a>
+    <a href="#contacts">Contacts</a>
+  </nav>
+</header>
+
+<section id="apropos">
+  <h2>À propos</h2>
+  <p>Jeune diplômé Master 2 Électronique, Radiofréquence et Télécommunication (ERT) à l’Université de Bretagne Occidentale (UBO). Passionné par les antennes, filtres RF et systèmes radar, avec expérience en conception et simulation électromagnétique (HFSS, CST, STK). Je cherche une première opportunité professionnelle en RF/Télécoms.</p>
+</section>
+
+<section id="projets">
+  <h2>Projets académiques</h2>
+  <div class="card">
+    <h3>Filtre volumique cavité cylindrique</h3>
+    <p><strong><em>Octobre 2024–Février 2025</em></strong> : Conception d’un filtre d’ordre 4 pour la bande K sous HFSS.</p>
+  </div>
+  <div class="card">
+    <h3>Chaîne RF Wi-Fi 2.4 GHz</h3>
+    <p><strong><em>Février–Mai 2024</em></strong> : Étude et conception d’une enceinte intelligente avec antenne patch intégrée, simulation HFSS et intégration dans ADS.</p>
+  </div>
+  <div class="card">
+    <h3>Antenne cornet bande V</h3>
+    <p><strong><em>Novembre 2023–Janvier 2024</em></strong> : Conception sur HFSS, calcul des dimensions, étude du gain, adaptation S11, angle d’ouverture et polarisation.</p>
+  </div>
+  <div class="card">
+    <h3>Caractérisation des matériaux RF</h3>
+    <p><strong><em>Novembre 2023–Janvier 2024</em></strong> : Étude de la caractérisation diélectrique HF à 6.63744 GHz avec cavité résonnante, simulée sous HFSS.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Expériences professionnelles</h2>
+  <div class="card">
+    <p><strong><em>Mars 2025–Juillet 2025</em></strong> : Stage de Fin d'Etudes M2 aux sein de laboratoire commun (Lab STICC (UBO) & Thales LASOME) et Ansys. Évaluation des outils de simulation électromagnétique et imagerie SAR, modélisation d’un scénario radar SAR au port de Saint-Malo, analyse des données brutes et images générées.</p>
+  </div>
+  <div class="card">
+    <p><strong><em>Janvier 2023–Juin 2023</em></strong> : Stage de Fin d'Etudes M2 aux sein d'ONHYM de Rabat, Maroc. Mise en place d’une authentification forte multi-facteur avec Windows Active Directory (AD), configuration des paramètres de sécurité et gestion des utilisateurs.</p>
+  </div>
+  <div class="card">
+    <p><strong><em>Mars 2021–Juin 2021</em></strong> : Projet de Fin d'Etudes L3 à la Faculté des Sciences et Techniques d'Al-Hoceima, Maroc. Conception de nouvelles topologies d’antennes multifonctionnelles à 2.4 GHz.</p>
+  </div>
+  <div class="card">
+    <p><strong><em>Avril 2019–Juin 2019</em></strong> : Stage de Fin d'Etudes DUT au sein de l'entreprise T2i Maroc, Casablanca. Méthodologie de conception d’une installation industrielle standard.</p>
+  </div>
+  <div class="card">
+    <p><strong><em>Juillet–Août 2018</em></strong> : Stage d'initiation au sein de l'ONCF, Maroc.</p>
+  </div>
+</section>
+
+<section id="formations">
+  <h2>Formations</h2>
+  <div class="card">
+    <p><strong><em>2023–2025</em></strong> : <a href="https://www.univ-brest.fr/fr" target="_blank">Master 2 Électronique, Énergie Électrique, Automatique</a> – Parcours : Électronique Radiofréquence et Télécommunication, UFR des Sciences et Techniques, UBO</p>
+  </div>
+  <div class="card">
+    <p><strong><em>2021–2023</em></strong> : <a href="https://www.fsts.ac.ma/" target="_blank">Master 2 Sciences et Techniques</a> – IRISTI, FST de Settat, Maroc</p>
+  </div>
+  <div class="card">
+    <p><strong><em>2020–2021</em></strong> : <a href="https://www.fsth.ma/" target="_blank">Licence (L3)</a> – Systèmes des Transmissions et Télécommunications, FST d’Al-Hoceima, Maroc</p>
+  </div>
+  <div class="card">
+    <p><strong><em>2018–2019</em></strong> : <a href="https://www.est-uh2c.ac.ma/" target="_blank">Diplôme Universitaire de Technologie (DUT)</a> – Génie électrique, Électrotechnique et Électricité Industrielle, EST de Casablanca, Maroc</p>
+  </div>
+</section>
+
+<section id="competences">
+  <h2>Compétences & Atouts</h2>
+  <div class="card">
+    <p><strong>Hyperfréquences et Télécoms :</strong> Radiofréquences et propagation des ondes, chaînes Tx/Rx, antennes, systèmes radar, conception de filtres RF, traitement du signal (bases).</p>
+    <p><strong>Compétences techniques :</strong> HFSS, STK-RFCM, ADS, CST Studio, MATLAB, QGIS, C, C++, Python, Octave, FPGA, Blender, Autopsy, Linux, PacketTracer, Microsoft Office (Word, Excel, PPT).</p>
+    <p><strong>Atouts :</strong> Adaptabilité, rigueur, autonomie et capacité à travailler avec des logiciels complexes.</p>
+  </div>
+</section>
+
+<section id="contacts">
+  <h2>Contacts</h2>
+  <div class="card">
+    <p><strong>Lieu :</strong> 11 Rue Frégate Le Vengeur, 29200, Brest</p>
+    <p><strong>Téléphone :</strong> +33 7 80 42 37 83</p>
+    <p><strong>Email :</strong> <a href="mailto:abdillahtoihirimohamed@gmail.com">abdillahtoihirimohamed@gmail.com</a></p>
+    <p><strong>LinkedIn :</strong> <a href="http://www.linkedin.com/in/toihiri-abdillah-4408a8218/" target="_blank">Profil LinkedIn</a></p>
+  </div>
+</section>
+
+</body>
+</html>
