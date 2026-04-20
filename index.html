@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio - Toihiri Mohamed ABDILLAH</title>
+
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -360,20 +361,6 @@ Téléphone : <a href="tel:0780423783"><strong>07 80 42 37 83</strong></a><br>
 LinkedIn : <a href="https://www.linkedin.com/in/toihiri-abdillah-4408a8218/" target="_blank">Profil LinkedIn</a>
 </div>
 </section>
-<script>
-const elements = document.querySelectorAll("section, .card, .rf-box");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-elements.forEach(el => observer.observe(el));
-</script>
 </body>
-</html>
+</html> 
