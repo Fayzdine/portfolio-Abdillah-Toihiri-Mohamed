@@ -1,2 +1,2 @@
 # portfolio-Abdillah-Toihiri-Mohamed
-Je suis un jeune ambitieux diplômé d'un Master 2 avec mention en Électronique, Radiofréquences et Télécommunications à l'université UBO FR, très motivé à trouver ma première opportunité dans les domaines des hyperfréquences, des télécoms et de l'aéronautique
+Après 2 ans d'expérience dans le domaine des radiofréquences, je possède des compétences solides en test et validation RF, ainsi qu'en mise en œuvre de bancs de test et en mesures HF. Je suis également à l'aise avec les outils de simulation industrielle et les techniques de mesure RF (VNA, analyseur de spectre, générateur RF, oscilloscope). Disponible immédiatement
