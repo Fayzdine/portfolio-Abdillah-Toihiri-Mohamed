@@ -3,170 +3,360 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Abdillah Toihiri Mohamed</title>
+<title>Portfolio - Toihiri Mohamed ABDILLAH</title>
+
 <style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin:0; padding:0;
-    background:#f4f6f9;
-    color:#333;
-    scroll-behavior: smooth;
-  }
-  a { text-decoration:none; color:#1E90FF; transition: color 0.3s; }
-  a:hover { color: #ff6347; }
-  h1,h2,h3 { margin:0.5rem 0; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  color: #2c2c2c;
+  scroll-behavior: smooth;
+}
 
-  header {
-    background: linear-gradient(135deg, #4e73df, #1cc88a);
-    color:white; text-align:center; padding:3rem 1rem;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  }
-  header h1{
-    font-size:2.5rem; 
-    letter-spacing:1px;
-  }
-  header p.titre-professionnel {
-    font-size:1.5rem;
-    font-weight: bold;
-    margin-top:0.5rem;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-  nav { margin-top:1rem; }
-  nav a{
-    margin:0 15px; padding:8px 12px; border-radius:5px;
-    transition:0.3s; background: rgba(255,255,255,0.2); color:white;
-  }
-  nav a:hover { background: rgba(255,255,255,0.5); transform: translateY(-2px); }
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #1f3c88, #1cc88a);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-  section { padding:3rem 1rem; max-width:1000px; margin:auto; }
-  section h2{
-    text-align:center; font-size:2rem; margin-bottom:2rem;
-    position: relative;
-    color: #1cc88a;
-  }
-  section h2::after{
-    content:'';
-    display:block;
-    width:60px; height:4px; background:#4e73df;
-    margin:0.5rem auto 0; border-radius:2px;
-  }
+header h1 {
+  font-size: 2.4rem;
+  margin: 0;
+}
 
-  #apropos { background:#e0f7fa; }
-  #projets { background:#ffebee; }
-  #experience { background:#e0f7fa; }
-  #formations { background:#ffebee; }
-  #competences { background:#e0f7fa; }
-  #contacts { background:#ffcccb; }
+header h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  opacity: 0.95;
+}
 
-  .card {
-    background: linear-gradient(135deg, #ffffff, #f1f8ff);
-    padding:1.5rem; margin-bottom:1.5rem;
-    border-radius:12px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover{
-    transform: translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-  }
+/* NAV */
+nav {
+  margin-top: 15px;
+}
 
-  #contacts a{
-    display:inline-block;
-    background: #4e73df;
-    color:white;
-    padding:10px 20px;
-    border-radius:6px;
-    margin-top:0.5rem;
-    transition: background 0.3s;
-  }
-  #contacts a:hover{ background:#1cc88a; }
+nav a {
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.9;
+}
 
-  @media(max-width:600px){
-    header h1{ font-size:2rem; }
-    header p.titre-professionnel{ font-size:1.2rem; }
-    nav a{ display:block; margin:8px 0; }
-    .card{ text-align:center; }
+nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  color: #1f3c88;
+  border-left: 5px solid #1cc88a;
+  padding-left: 10px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 1.4rem;
+  margin: 1rem 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.25s;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+/* GRID 2 COLONNES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.box {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.box strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #1f3c88;
+}
+
+/* LISTES */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background: #f8fafc;
+  margin: 6px 0;
+  padding: 9px;
+  border-radius: 8px;
+  border-left: 3px solid #1cc88a;
+}
+
+/* MISSIONS */
+.mission {
+  color: #1cc88a;
+  font-weight: bold;
+}
+
+/* DATES */
+.date {
+  font-style: italic;
+  color: #555;
+}
+
+/* LINKS */
+a {
+  color: #1f3c88;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1cc88a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
+}
 </style>
+
 </head>
+
 <body>
 
 <header>
-  <h1>Abdillah Toihiri Mohamed</h1>
-  <p class="titre-professionnel">Ingénieur Test & Validation RF(3 ans d'expérience)</p>
-  <nav>
-    <a href="#apropos">À propos</a>
-    <a href="#projets">Projets académiques</a>
-    <a href="#experience">Expériences professionnelles</a>
-    <a href="#formations">Formations</a>
-    <a href="#competences">Compétences & Atouts</a>
-    <a href="#contacts">Contacts</a>
-  </nav>
+<h1>Toihiri Mohamed ABDILLAH</h1>
+<h2>Ingénieur Test & Validation RF (3 ans d’expérience)</h2>
+
+<nav>
+<a href="#apropos">À propos</a>
+<a href="#competences">Compétences</a>
+<a href="#experiences">Expériences</a>
+<a href="#formations">Formations</a>
+<a href="#outils">Outils</a>
+<a href="#langues">Langues</a>
+<a href="#atouts">Atouts</a>
+<a href="#contacts">Contacts</a>
+</nav>
 </header>
 
+<!-- A PROPOS -->
 <section id="apropos">
-  <h2>À propos</h2>
-  <p>Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des compétences
-solides en test et validation RF, ainsi qu'en mise en œuvre de bancs de test et en mesures HF. Je
-suis également à l'aise avec les outils de simulation industrielle et les techniques de mesure RF
-(VNA, analyseur de spectre, générateur RF, oscilloscope). Disponible immédiatement</p>
+<h2>À propos</h2>
+<div class="card">
+Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des compétences solides en test et validation RF, ainsi qu'en mise en œuvre de bancs de test et en mesures HF. Je suis également à l'aise avec les outils de simulation industrielle et les techniques de mesure RF (VNA, analyseur de spectre, générateur RF, oscilloscope). Disponible immédiatement
+</div>
 </section>
 
-<section id="projets">
-  <h2>Projets académiques</h2>
-  <div class="card">
-    <h3>Conception d’un amplificateur faible bruit (LNA) à 2.4 GHz</h3>
-    <p><strong><em>Octobre 2024 – Janvier 2025</em></strong> : Conception sous ADS, optimisation des réseaux d’adaptation, réalisation PCB, mesures avec gain ≈ 11 dB.</p>
-    <p><strong><em>Mars 2025 – Juillet 2025</em></strong> : Stage M2 – LAB-STICC / Thales / ANSYS. Conception d’antennes cornet à 17 GHz sous HFSS, simulation radar SAR, modélisation de scénarios STK et validation d’imagerie SAR.</p>
-  </div>
-  <div class="card">
-    <h3>Filtres RF à sauts d’impédance</h3>
-    <p><strong><em>Octobre 2024 – Décembre 2024</em></strong> : Mise en place d’un banc de test, calibration VNA, caractérisation S11/S21 et optimisation mécanique.</p>
-  </div>
-  <div class="card">
-    <h3>Caractérisation d’une cavité résonnante RF</h3>
-    <p><strong><em>Septembre 2024 – Novembre 2024</em></strong> : Mesures VNA, analyse spectrale et identification de la fréquence de résonance à 9 GHz.</p>
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Expériences professionnelles</h2>
-  <div class="card">
-    <p><strong><em>Mars 2025 – Juillet 2025</em></strong> : Stage M2 – LAB-STICC / Thales / ANSYS. Conception d’antennes cornet à 17 GHz sous HFSS, simulation radar SAR, modélisation de scénarios STK et validation d’imagerie SAR.</p>
-  </div>
-</section>
-
-<section id="formations">
-  <h2>Formations</h2>
-  <div class="card">
-    <p><strong><em>2023–2025</em></strong> : Master 2 Électronique Radiofréquence et Télécommunications (ERT) – Université de Bretagne Occidentale</p>
-  </div>
-  <div class="card">
-    <p><strong><em>2021–2023</em></strong> : Master Réseaux Informatiques et Télécommunications – FST Settat, Maroc</p>
-  </div>
-  <div class="card">
-    <p><strong><em>2020–2021</em></strong> : Licence Systèmes des Télécommunications – FST Al Hoceima, Maroc</p>
-  </div>
-</section>
-
+<!-- COMPETENCES -->
 <section id="competences">
-  <h2>Compétences & Atouts</h2>
-  <div class="card">
-    <p><strong>Simulation RF :</strong> HFSS, ADS, CST Studio, STK</p>
-    <p><strong>Mesures RF :</strong> VNA, analyseur de spectre, générateur RF, oscilloscope</p>
-    <p><strong>Programmation :</strong> Python, MATLAB/Simulink, FPGA, Linux</p>
-    <p><strong>Atouts :</strong> Autonomie, esprit d’analyse, travail en équipe</p>
-  </div>
+<h2>Compétences</h2>
+
+<div class="grid">
+
+<div class="box">
+<strong>Mesure et Instrumentation RF</strong>
+<ul>
+<li>VNA (Vector Network Analyzer)</li>
+<li>Power supply</li>
+<li>Analyseur de spectre</li>
+<li>Générateur de fréquence</li>
+<li>Oscilloscope</li>
+</ul>
+</div>
+
+<div class="box">
+<strong>Test & Validation RF / Micro-ondes</strong>
+<ul>
+<li>Bancs de test RF</li>
+<li>Calibration VNA (SOLT, TRL)</li>
+<li>Composants RF (filtres, amplificateurs, antennes)</li>
+<li>Mesure paramètres S</li>
+<li>Traitement RF sous Python</li>
+<li>Rédaction de protocoles</li>
+<li>RF Front-End (LNA + PA)</li>
+<li>RFID / PCB</li>
+</ul>
+</div>
+
+</div>
 </section>
 
+<!-- EXPERIENCES -->
+<section id="experiences">
+<h2>Expériences professionnelles</h2>
+
+<div class="card">
+
+<strong>Stage de M2 : Évaluation des outils de simulation EM pour une antenne mobile en imagerie SAR</strong><br>
+<span class="date">De mars 2025 à juillet 2025</span> – LAB-STICC & THALES LAS & ANSYS, Brest<br><br>
+
+L’objectif est de valider la simulation d’un radar SAR embarqué et de générer l’imagerie SAR sous STK/RFCM.<br><br>
+
+<span class="mission">Missions :</span><br>
+Conception et simulation d’antennes cornet Rx/Tx à 17 GHz sous HFSS<br>
+Validation des performances antennaires : gain, adaptation, diagramme de rayonnement<br>
+Modélisation de scénarios radar aériens et maritimes sous STK<br>
+Simulation et validation d’imagerie SAR sous STK-RFCM<br>
+Rédaction de protocoles et documentation technique
+
+</div>
+
+<div class="card">
+
+<strong>Projet RF : Conception et caractérisation d’un amplificateur faible bruit (LNA) à 2,4 GHz</strong><br>
+<span class="date">D’octobre 2024 à janvier 2025</span> – Université de Bretagne Occidentale, Brest<br><br>
+
+Mission :<br>
+Conception et réalisation d’un amplificateur faible bruit (LNA) à 2,4 GHz sous ADS<br>
+Optimisation des réseaux d’adaptation (selfs et capacités) sous ADS<br>
+Réalisation du PCB : fabrication, assemblage et câblage du circuit<br>
+Comparaison simulation/mesure : gain ≈ 11 dB et S12 ≈ –30 dB<br><br>
+
+Objectif : Assurer la stabilité du transistor
+
+</div>
+
+<div class="card">
+
+<strong>Projet en hyperfréquences : Mesure et optimisation de filtres volumiques à sauts d’impédance</strong><br>
+<span class="date">D’octobre 2024 à décembre 2024</span> – Université de Bretagne Occidentale, Brest<br><br>
+
+Ce travail consiste à étudier des filtres RF utilisés pour laisser passer certaines fréquences et bloquer les autres, puis à analyser comment les réglages et la calibration influencent leur fonctionnement.<br><br>
+
+<span class="mission">Missions :</span><br>
+Mise en place d’un banc de test RF avec analyseur de réseau (VNA)<br>
+Calibration de mesure (Thru) : validation avec S11 ≈ -20 dB et S21 ≈ 0 dB<br>
+Caractérisation des filtres (S11/S21)<br>
+Optimisation mécanique
+
+</div>
+
+<div class="card">
+
+<strong>Projet RF : Caractérisation d’une cavité résonnante RF en banc de mesure</strong><br>
+<span class="date">De septembre 2024 à novembre 2024</span> – Université de Bretagne Occidentale, Brest<br><br>
+
+<span class="mission">Missions :</span><br>
+Mise en place d’un banc de test à 9 GHz<br>
+Mesures VNA et analyseur de spectre<br>
+Identification de la fréquence de résonance<br>
+Exploitation des résultats et rédaction technique
+
+</div>
+
+</section>
+
+<!-- FORMATIONS -->
+<section id="formations">
+<h2>Formations</h2>
+
+<div class="card">
+MASTER 2 Électronique Radiofréquence et Télécommunication – Université de Bretagne Occidentale Brest (2023–2025)
+</div>
+
+<div class="card">
+MASTER 2 Ingénierie des Réseaux Informatiques et Systèmes des Télécommunications Intelligents – Faculté des Sciences et Techniques Settat Maroc (2021–2023)
+</div>
+
+<div class="card">
+LICENCE 3 Systèmes des Transmissions et Télécommunications – Faculté des Sciences et Techniques Al Hoceima Maroc (2020–2021)
+</div>
+
+</section>
+
+<!-- OUTILS -->
+<section id="outils">
+<h2>Outils informatiques</h2>
+
+<div class="grid">
+
+<div class="box">
+<strong>Logiciels de conception et simulation industrielle</strong>
+<ul>
+<li>HFSS</li>
+<li>ADS (Keysight)</li>
+<li>CST Studio</li>
+<li>STK</li>
+</ul>
+</div>
+
+<div class="box">
+<strong>Programmation et systèmes</strong>
+<ul>
+<li>Python</li>
+<li>MATLAB / Simulink</li>
+<li>FPGA</li>
+<li>Linux</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- LANGUES -->
+<section id="langues">
+<h2>Langues</h2>
+
+<div class="card">
+Français : langue maternelle<br>
+Arabe : fluent<br>
+Anglais : technique
+</div>
+
+</section>
+
+<!-- ATOUTS -->
+<section id="atouts">
+<h2>Atouts</h2>
+
+<div class="card">
+Ponctuel et autonome dans le travail<br>
+Esprit d’équipe<br>
+Bon sens d’analyse
+</div>
+
+</section>
+
+<!-- CONTACTS -->
 <section id="contacts">
-  <h2>Contacts</h2>
-  <div class="card">
-    <p><strong>Téléphone :</strong> 07 80 42 37 83</p>
-    <p><strong>Email :</strong> <a href="mailto:abdillahtoihirimohamed@gmail.com">abdillahtoihirimohamed@gmail.com</a></p>
-    <p><strong>LinkedIn :</strong> <a href="http://www.linkedin.com/in/toihiri-abdillah-4408a8218/" target="_blank">Profil LinkedIn</a></p>
-  </div>
+<h2>Contacts</h2>
+
+<div class="card">
+Email : <a href="mailto:abdillahtoihirimohamed@gmail.com">abdillahtoihirimohamed@gmail.com</a><br>
+Téléphone : 07 80 42 37 83<br>
+LinkedIn : <a href="https://www.linkedin.com/in/toihiri-abdillah-4408a8218/" target="_blank">Profil LinkedIn</a>
+</div>
+
 </section>
 
 </body>
