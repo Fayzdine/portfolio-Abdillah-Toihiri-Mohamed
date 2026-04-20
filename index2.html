@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Toihiri Mohamed ABDILLAH</title>
+
+<style>
+
+/* =========================
+   FOND ANIMÉ TYPE RADAR RF
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #eaeaea;
+  scroll-behavior: smooth;
+
+  background: radial-gradient(circle at 20% 20%, #1b2a4a, #0b1020, #05070f);
+  background-size: 300% 300%;
+  animation: bgMove 12s ease-in-out infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* SCAN LUMINEUX (type radar) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.04) 50%,
+    transparent 100%
+  );
+
+  animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* =========================
+   HEADER RADAR
+========================= */
+header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #7dd3fc;
+}
+
+/* NAV */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+nav a:hover {
+  color: #7dd3fc;
+  opacity: 1;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  color: #7dd3fc;
+  border-left: 5px solid #ffb36b;
+  padding-left: 10px;
+  text-shadow: 0 0 10px rgba(125,211,252,0.3);
+}
+
+/* =========================
+   CARTES GLASSMORPHISM
+========================= */
+.card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  padding: 1.4rem;
+  margin: 1rem 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.box {
+  background: rgba(255,255,255,0.06);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LISTES */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(255,255,255,0.05);
+  margin: 6px 0;
+  padding: 9px;
+  border-radius: 8px;
+  border-left: 3px solid #ffb36b;
+}
+
+/* RESULTATS */
+.result {
+  color: #ffb36b;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* LINKS */
+a {
+  color: #7dd3fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffb36b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Toihiri Mohamed ABDILLAH</h1>
+<h2>Ingénieur en Test, Validation et Mesure en Radiofréquences et Micro-ondes</h2>
+
+<nav>
+<a href="#apropos">À propos</a>
+<a href="#competences">Compétences</a>
+<a href="#experiences">Expériences</a>
+<a href="#formations">Formations</a>
+<a href="#outils">Outils</a>
+<a href="#langues">Langues</a>
+<a href="#atouts">Atouts</a>
+<a href="#contacts">Contacts</a>
+</nav>
+</header>
+
+<!-- À PROPOS -->
+<section id="apropos">
+<h2>À propos</h2>
+<div class="card">
+Ingénieur spécialisé en test, validation et caractérisation de systèmes radiofréquences et micro-ondes. Expérience dans la mise en œuvre de bancs de mesure RF, l’analyse de performances de composants et l’exploitation de données RF. Maîtrise des environnements de simulation et mesure RF (VNA, analyseur de spectre, générateur RF, oscilloscope).
+</div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+<h2>Compétences</h2>
+
+<div class="grid">
+
+<div class="box">
+<strong>Mesure RF</strong>
+<ul>
+<li>VNA</li>
+<li>Analyseur de spectre</li>
+<li>Oscilloscope</li>
+<li>Générateur RF</li>
+</ul>
+</div>
+
+<div class="box">
+<strong>Test & Validation</strong>
+<ul>
+<li>Calibration SOLT / TRL</li>
+<li>Paramètres S</li>
+<li>Python RF</li>
+<li>RF Front-End</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- EXPÉRIENCES -->
+<section id="experiences">
+<h2>Expériences</h2>
+
+<div class="card">
+Stage M2 – Imagerie SAR (LAB-STICC / Thales / ANSYS)<br>
+Conception antenne 17 GHz, simulation HFSS, radar SAR STK
+</div>
+
+<div class="card">
+LNA 2.4 GHz – ADS<br>
+Gain ≈ <span class="result">11 dB</span>, S12 ≈ <span class="result">-30 dB</span>
+</div>
+
+<div class="card">
+Filtres RF<br>
+S11 ≈ <span class="result">-20 dB</span>
+</div>
+
+</section>
+
+<!-- FORMATIONS -->
+<section id="formations">
+<h2>Formations</h2>
+
+<div class="card">
+Master 2 Électronique Radiofréquence et Télécommunications – UBO
+</div>
+
+<div class="card">
+Master 2 Réseaux et Télécommunications Intelligents – FST Settat
+</div>
+
+<div class="card">
+Licence Systèmes des Transmissions et Télécommunications – FST Al Hoceima
+</div>
+
+</section>
+
+<!-- OUTILS -->
+<section id="outils">
+<h2>Outils</h2>
+
+<div class="grid">
+
+<div class="box">
+<strong>Simulation</strong>
+<ul>
+<li>HFSS</li>
+<li>ADS</li>
+<li>CST</li>
+<li>STK</li>
+</ul>
+</div>
+
+<div class="box">
+<strong>Programmation</strong>
+<ul>
+<li>Python</li>
+<li>MATLAB</li>
+<li>Linux</li>
+<li>FPGA</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacts">
+<h2>Contacts</h2>
+
+<div class="card">
+Email : abdillahtoihirimohamed@gmail.com<br>
+Téléphone : 07 80 42 37 83<br>
+LinkedIn : profil
+</div>
+
+</section>
+
+</body>
+</html>
