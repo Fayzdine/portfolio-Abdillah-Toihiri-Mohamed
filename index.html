@@ -1,87 +1,155 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Abdillah Toihiri Mohamed</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin:0; padding:0;
+      background:#f4f6f9;
+      color:#333;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration:none; color:#1E90FF; transition: color 0.3s; }
+    a:hover { color: #ff6347; }
+    h1,h2,h3 { margin:0.5rem 0; font-weight:700; color:#111; }
 
-export default function PortfolioRF() {
+    header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color:white; text-align:center; padding:3rem 1rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1{ font-size:2.5rem; letter-spacing:1px; }
+    header p.titre-professionnel {
+      font-size:1.5rem;
+      font-weight: bold;
+      margin-top:0.5rem;
+      letter-spacing: 1px;
+      color: #fff;
+    }
 
-  // Download HTML version of CV
-  const handleDownload = () => {
-    const htmlContent = document.documentElement.outerHTML;
-    const blob = new Blob([htmlContent], { type: "text/html" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "CV_Abdillah_Toihiri_Mohamed.html";
-    link.click();
-    URL.revokeObjectURL(url);
-  };
+    nav { margin-top:1rem; }
+    nav a{
+      margin:0 15px; padding:8px 12px; border-radius:5px;
+      transition:0.3s; background: rgba(255,255,255,0.2); color:white;
+    }
+    nav a:hover { background: rgba(255,255,255,0.5); transform: translateY(-2px); }
 
-  return (
-    <div className="min-h-screen text-white relative overflow-hidden">
+    section { padding:3rem 1rem; max-width:1000px; margin:auto; }
+    section h2{
+      text-align:center; font-size:2rem; margin-bottom:2rem;
+      position: relative;
+      color: #111;
+      font-weight:800;
+    }
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950 to-emerald-950 animate-pulse" />
+    .card {
+      background: linear-gradient(135deg, #ffffff, #f1f8ff);
+      padding:1.5rem; margin-bottom:1.5rem;
+      border-radius:12px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover{
+      transform: translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
 
-      {/* HEADER */}
-      <section className="relative text-center py-24 px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold"
-        >
-          Toihiri Mohamed ABDILLAH
-        </motion.h1>
+    #contacts a{
+      display:inline-block;
+      background: #4e73df;
+      color:white;
+      padding:10px 20px;
+      border-radius:6px;
+      margin-top:0.5rem;
+      transition: background 0.3s;
+    }
+    #contacts a:hover{ background:#1cc88a; }
 
-        <p className="mt-4 text-xl md:text-2xl font-semibold text-emerald-300">
-          Ingénieur Test et Validation en Radiofréquences et Télécommunications
-        </p>
+    @media(max-width:600px){
+      header h1{ font-size:2rem; }
+      header p.titre-professionnel{ font-size:1.2rem; }
+      nav a{ display:block; margin:8px 0; }
+      .card{ text-align:center; }
+    }
+  </style>
+</head>
+<body>
 
-        {/* DOWNLOAD BUTTON */}
-        <div className="mt-8">
-          <Button onClick={handleDownload} className="text-black bg-emerald-400 hover:bg-emerald-300">
-            Télécharger le CV
-          </Button>
-        </div>
-      </section>
+<header>
+  <h1>Abdillah Toihiri Mohamed</h1>
+  <p class="titre-professionnel">Ingénieur Test & Validation RF (3 ans d'expérience)</p>
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#projets">Projets académiques</a>
+    <a href="#experience">Expériences professionnelles</a>
+    <a href="#formations">Formations</a>
+    <a href="#competences">Compétences & Atouts</a>
+    <a href="#contacts">Contacts</a>
+  </nav>
+</header>
 
-      {/* PROFIL */}
-      <section className="relative max-w-5xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-6">Profil professionnel</h2>
+<section id="apropos">
+  <h2>À propos</h2>
+  <p>Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des compétences
+solides en test et validation RF, ainsi qu'en mise en œuvre de bancs de test et en mesures HF. Je
+suis également à l'aise avec les outils de simulation industrielle et les techniques de mesure RF
+(VNA, analyseur de spectre, générateur RF, oscilloscope). Disponible immédiatement.</p>
+</section>
 
-        <Card className="bg-slate-900/70 backdrop-blur-md border-slate-700">
-          <CardContent className="p-6 text-slate-200">
-            Ingénieur spécialisé en test, validation et simulation en radiofréquences.
-            Expérience industrielle dans la mise en place de bancs de mesure RF et exploitation de logiciels électromagnétiques avancés.
-            <br /><br />
-            Disponibilité : <span className="text-emerald-400 font-bold">immédiate</span>
-          </CardContent>
-        </Card>
-      </section>
+<section id="projets">
+  <h2>Projets académiques</h2>
+  <div class="card">
+    <h3>Filtre volumique cavité cylindrique</h3>
+    <p><strong><em>Octobre 2024–Février 2025</em></strong> : Conception d’un filtre d’ordre 4 pour la bande K sous HFSS.</p>
+  </div>
+  <div class="card">
+    <h3>Chaîne RF Wi-Fi 2.4 GHz</h3>
+    <p><strong><em>Février–Mai 2024</em></strong> : Étude et conception d’une enceinte intelligente avec antenne patch intégrée, simulation HFSS et intégration dans ADS.</p>
+  </div>
+  <div class="card">
+    <h3>Antenne cornet bande V</h3>
+    <p><strong><em>Novembre 2023–Janvier 2024</em></strong> : Conception sur HFSS, calcul des dimensions, étude du gain, adaptation S11, angle d’ouverture et polarisation.</p>
+  </div>
+  <div class="card">
+    <h3>Caractérisation des matériaux RF</h3>
+    <p><strong><em>Novembre 2023–Janvier 2024</em></strong> : Étude de la caractérisation diélectrique HF à 6.63744 GHz avec cavité résonnante, simulée sous HFSS.</p>
+  </div>
+</section>
 
-      {/* COMPETENCES */}
-      <section className="relative max-w-5xl mx-auto py-10 px-6">
-        <h2 className="text-3xl font-bold mb-6">Compétences techniques</h2>
+<section id="experience">
+  <h2>Expériences professionnelles</h2>
+  <div class="card">
+    <p><strong><em>Mars 2025–Juillet 2025</em></strong> : Stage de fin d’études de Master 2 : Évaluation des outils de simulation électromagnétique et imagerie SAR, LAB-STICC (UBO), Thales LAS OME et ANSYS.</p>
+  </div>
+</section>
 
-        <div className="grid md:grid-cols-2 gap-6">
+<section id="formations">
+  <h2>Formations</h2>
 
-          <Card className="bg-slate-900/70">
-            <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-300">Simulation et conception en radiofréquences</h3>
-              Advanced Design System (ADS de Keysight), High Frequency Structure Simulator (HFSS), Computer Simulation Technology (CST), Satellite Tool Kit (STK)
-            </CardContent>
-          </Card>
+  <div class="card">
+    <p><strong><em>2023–2025</em></strong> : Master 2 Électronique, Énergie Électrique et Automatique – Parcours : Électronique Radiofréquence et Télécommunications (ERT), UBO</p>
+  </div>
 
-          <Card className="bg-slate-900/70">
-            <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-300">Mesure et instrumentation radiofréquence</h3>
-              Analyseur de réseau vectoriel (VNA), analyseur de spectre, oscilloscope, générateur RF
-            </CardContent>
-          </Card>
+  <div class="card">
+    <p><strong><em>2021–2023</em></strong> : Master 2 Sciences et Techniques – Ingénierie des Réseaux Informatiques et Systèmes de Télécommunications Intelligents (IRSTI), FST Settat</p>
+  </div>
 
-        </div>
-      </section>
+  <div class="card">
+    <p><strong><em>2020–2021</em></strong> : Licence – Systèmes des Transmissions et Télécommunications (STT), FST Al Hoceima</p>
+  </div>
 
-    </div>
-  );
-}
+</section>
+
+<section id="contacts">
+  <h2>Contacts</h2>
+  <div class="card">
+    <p><strong>Email :</strong> abdillahtoihirimohamed@gmail.com</p>
+    <p><strong>Téléphone :</strong> +33 7 80 42 37 83</p>
+  </div>
+</section>
+
+</body>
+</html>
