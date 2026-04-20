@@ -3,123 +3,85 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function PortfolioRF() {
+
+  // Download HTML version of CV
+  const handleDownload = () => {
+    const htmlContent = document.documentElement.outerHTML;
+    const blob = new Blob([htmlContent], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "CV_Abdillah_Toihiri_Mohamed.html";
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen text-white relative overflow-hidden">
+
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950 to-emerald-950 animate-pulse" />
+
       {/* HEADER */}
-      <section className="text-center py-20 px-6 bg-gradient-to-br from-indigo-600 via-cyan-500 to-emerald-400">
+      <section className="relative text-center py-24 px-6">
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-bold"
         >
           Toihiri Mohamed ABDILLAH
         </motion.h1>
 
-        <p className="mt-4 text-lg md:text-2xl font-semibold">
-          Ingénieur Test & Validation RF (3 ans d'expérience)
+        <p className="mt-4 text-xl md:text-2xl font-semibold text-emerald-300">
+          Ingénieur Test et Validation en Radiofréquences et Télécommunications
         </p>
 
-        <div className="mt-6 flex justify-center gap-4 flex-wrap">
-          <Button>RF Engineering</Button>
-          <Button variant="secondary">Radar SAR</Button>
-          <Button variant="secondary">Antenna Design</Button>
+        {/* DOWNLOAD BUTTON */}
+        <div className="mt-8">
+          <Button onClick={handleDownload} className="text-black bg-emerald-400 hover:bg-emerald-300">
+            Télécharger le CV
+          </Button>
         </div>
       </section>
 
-      {/* PROFILE */}
-      <section className="max-w-5xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-6">Profil</h2>
-        <Card className="bg-slate-900 border-slate-700">
+      {/* PROFIL */}
+      <section className="relative max-w-5xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold mb-6">Profil professionnel</h2>
+
+        <Card className="bg-slate-900/70 backdrop-blur-md border-slate-700">
           <CardContent className="p-6 text-slate-200">
-            Ingénieur RF spécialisé en test, validation et simulation électromagnétique.
-            Expérience sur bancs de mesure et environnements industriels (HFSS, ADS, CST, STK).
-            
-            <div className="mt-4 text-emerald-400 font-semibold">
-              Disponibilité immédiate
-            </div>
+            Ingénieur spécialisé en test, validation et simulation en radiofréquences.
+            Expérience industrielle dans la mise en place de bancs de mesure RF et exploitation de logiciels électromagnétiques avancés.
+            <br /><br />
+            Disponibilité : <span className="text-emerald-400 font-bold">immédiate</span>
           </CardContent>
         </Card>
       </section>
 
       {/* COMPETENCES */}
-      <section className="max-w-5xl mx-auto py-10 px-6">
-        <h2 className="text-3xl font-bold mb-6">Compétences</h2>
+      <section className="relative max-w-5xl mx-auto py-10 px-6">
+        <h2 className="text-3xl font-bold mb-6">Compétences techniques</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <Card className="bg-slate-900">
+
+          <Card className="bg-slate-900/70">
             <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-400">Simulation RF</h3>
-              HFSS, ADS (Keysight), CST, STK
+              <h3 className="font-bold text-cyan-300">Simulation et conception en radiofréquences</h3>
+              Advanced Design System (ADS de Keysight), High Frequency Structure Simulator (HFSS), Computer Simulation Technology (CST), Satellite Tool Kit (STK)
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-900">
+          <Card className="bg-slate-900/70">
             <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-400">Mesure RF</h3>
-              VNA, analyseur de spectre, oscilloscope, générateur RF
+              <h3 className="font-bold text-cyan-300">Mesure et instrumentation radiofréquence</h3>
+              Analyseur de réseau vectoriel (VNA), analyseur de spectre, oscilloscope, générateur RF
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-900">
-            <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-400">Programmation</h3>
-              Python, MATLAB/Simulink, Linux, FPGA
-            </CardContent>
-          </Card>
-
-          <Card className="bg-slate-900">
-            <CardContent className="p-5">
-              <h3 className="font-bold text-cyan-400">RF Systems</h3>
-              LNA, PA, filtres RF, antennes, radar SAR
-            </CardContent>
-          </Card>
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section className="max-w-5xl mx-auto py-10 px-6">
-        <h2 className="text-3xl font-bold mb-6">Expériences</h2>
-
-        <div className="space-y-6">
-          <Card className="bg-slate-900">
-            <CardContent className="p-6">
-              <h3 className="font-bold text-emerald-400">LAB-STICC / THALES / ANSYS</h3>
-              <p>Mars 2025 - Juillet 2025</p>
-              <p className="mt-2 text-slate-300">
-                Simulation radar SAR, antennes 17 GHz, STK, HFSS, imagerie SAR
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-slate-900">
-            <CardContent className="p-6">
-              <h3 className="font-bold text-emerald-400">LNA 2.4 GHz (ADS)</h3>
-              <p>Projet RF</p>
-              <p className="mt-2 text-slate-300">
-                Gain ≈ <span className="text-emerald-400 font-bold">11 dB</span> | S12 ≈ <span className="text-cyan-400 font-bold">-30 dB</span>
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-slate-900">
-            <CardContent className="p-6">
-              <h3 className="font-bold text-emerald-400">Filtres RF VNA</h3>
-              <p>Calibration SOLT / TRL</p>
-              <p className="mt-2 text-slate-300">
-                S11 ≈ <span className="text-emerald-400 font-bold">-20 dB</span> | S21 ≈ <span className="text-cyan-400 font-bold">0 dB</span>
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section className="py-16 text-center bg-gradient-to-r from-indigo-600 to-emerald-500">
-        <h2 className="text-3xl font-bold mb-4">Contact</h2>
-        <p>abdillahtoihirimohamed@gmail.com</p>
-        <p>+33 7 80 42 37 83</p>
-      </section>
     </div>
   );
 }
