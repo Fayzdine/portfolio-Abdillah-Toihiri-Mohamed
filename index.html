@@ -10,17 +10,18 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f6f9;
+  background: #f5f7fb;
   color: #2c2c2c;
   scroll-behavior: smooth;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #1f3c88, #1cc88a);
+  background: linear-gradient(135deg, #1f2a44, #2b5876);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 header h1 {
@@ -29,9 +30,10 @@ header h1 {
 }
 
 header h2 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-top: 0.5rem;
-  opacity: 0.95;
+  color: #ffb36b;
+  font-weight: bold;
 }
 
 /* NAV */
@@ -48,8 +50,8 @@ nav a {
 }
 
 nav a:hover {
+  color: #ffb36b;
   opacity: 1;
-  text-decoration: underline;
 }
 
 /* SECTIONS */
@@ -60,8 +62,8 @@ section {
 }
 
 h2 {
-  color: #1f3c88;
-  border-left: 5px solid #1cc88a;
+  color: #2b5876;
+  border-left: 5px solid #ffb36b;
   padding-left: 10px;
 }
 
@@ -71,17 +73,17 @@ h2 {
   padding: 1.4rem;
   margin: 1rem 0;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   transition: 0.25s;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
-/* GRID 2 COLONNES */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,14 +95,14 @@ h2 {
   background: white;
   padding: 16px;
   border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.08);
   height: 100%;
 }
 
 .box strong {
   display: block;
   margin-bottom: 10px;
-  color: #1f3c88;
+  color: #2b5876;
 }
 
 /* LISTES */
@@ -115,12 +117,12 @@ ul li {
   margin: 6px 0;
   padding: 9px;
   border-radius: 8px;
-  border-left: 3px solid #1cc88a;
+  border-left: 3px solid #ffb36b;
 }
 
 /* MISSIONS */
 .mission {
-  color: #1cc88a;
+  color: #ff8c42;
   font-weight: bold;
 }
 
@@ -130,15 +132,22 @@ ul li {
   color: #555;
 }
 
+/* RESULTATS TECHNIQUES */
+.result {
+  color: #c06c00;
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* LINKS */
 a {
-  color: #1f3c88;
+  color: #2b5876;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: #1cc88a;
+  color: #ffb36b;
 }
 
 /* RESPONSIVE */
@@ -191,6 +200,8 @@ Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des
 <li>Analyseur de spectre</li>
 <li>Générateur de fréquence</li>
 <li>Oscilloscope</li>
+<li>Composants RF (filtres, amplificateurs, antennes)</li>
+<li>RFID / PCB</li>
 </ul>
 </div>
 
@@ -199,12 +210,10 @@ Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des
 <ul>
 <li>Bancs de test RF</li>
 <li>Calibration VNA (SOLT, TRL)</li>
-<li>Composants RF (filtres, amplificateurs, antennes)</li>
 <li>Mesure paramètres S</li>
 <li>Traitement RF sous Python</li>
 <li>Rédaction de protocoles</li>
 <li>RF Front-End (LNA + PA)</li>
-<li>RFID / PCB</li>
 </ul>
 </div>
 
@@ -216,7 +225,6 @@ Après 3 ans d'expérience dans le domaine des radiofréquences, je possède des
 <h2>Expériences professionnelles</h2>
 
 <div class="card">
-
 <strong>Stage de M2 : Évaluation des outils de simulation EM pour une antenne mobile en imagerie SAR</strong><br>
 <span class="date">De mars 2025 à juillet 2025</span> – LAB-STICC & THALES LAS & ANSYS, Brest<br><br>
 
@@ -228,50 +236,43 @@ Validation des performances antennaires : gain, adaptation, diagramme de rayonne
 Modélisation de scénarios radar aériens et maritimes sous STK<br>
 Simulation et validation d’imagerie SAR sous STK-RFCM<br>
 Rédaction de protocoles et documentation technique
-
 </div>
 
 <div class="card">
-
 <strong>Projet RF : Conception et caractérisation d’un amplificateur faible bruit (LNA) à 2,4 GHz</strong><br>
 <span class="date">D’octobre 2024 à janvier 2025</span> – Université de Bretagne Occidentale, Brest<br><br>
 
 Mission :<br>
 Conception et réalisation d’un amplificateur faible bruit (LNA) à 2,4 GHz sous ADS<br>
-Optimisation des réseaux d’adaptation (selfs et capacités) sous ADS<br>
-Réalisation du PCB : fabrication, assemblage et câblage du circuit<br>
-Comparaison simulation/mesure : gain ≈ 11 dB et S12 ≈ –30 dB<br><br>
+Optimisation des réseaux d’adaptation sous ADS<br>
+Réalisation du PCB<br>
+Comparaison simulation/mesure : gain ≈ <span class="result">11 dB</span> et S12 ≈ <span class="result">–30 dB</span><br><br>
 
 Objectif : Assurer la stabilité du transistor
-
 </div>
 
 <div class="card">
+<strong>Projet en hyperfréquences : Mesure et optimisation de filtres volumiques</strong><br>
+<span class="date">D’octobre 2024 à décembre 2024</span><br><br>
 
-<strong>Projet en hyperfréquences : Mesure et optimisation de filtres volumiques à sauts d’impédance</strong><br>
-<span class="date">D’octobre 2024 à décembre 2024</span> – Université de Bretagne Occidentale, Brest<br><br>
-
-Ce travail consiste à étudier des filtres RF utilisés pour laisser passer certaines fréquences et bloquer les autres, puis à analyser comment les réglages et la calibration influencent leur fonctionnement.<br><br>
+Ce travail consiste à étudier des filtres RF et analyser leur comportement.<br><br>
 
 <span class="mission">Missions :</span><br>
-Mise en place d’un banc de test RF avec analyseur de réseau (VNA)<br>
-Calibration de mesure (Thru) : validation avec S11 ≈ -20 dB et S21 ≈ 0 dB<br>
-Caractérisation des filtres (S11/S21)<br>
+Mise en place banc RF avec VNA<br>
+Calibration de mesure (S11 ≈ <span class="result">-20 dB</span>, S21 ≈ <span class="result">0 dB</span>)<br>
+Caractérisation des filtres<br>
 Optimisation mécanique
-
 </div>
 
 <div class="card">
-
-<strong>Projet RF : Caractérisation d’une cavité résonnante RF en banc de mesure</strong><br>
-<span class="date">De septembre 2024 à novembre 2024</span> – Université de Bretagne Occidentale, Brest<br><br>
+<strong>Projet RF : Cavité résonnante RF</strong><br>
+<span class="date">De septembre 2024 à novembre 2024</span><br><br>
 
 <span class="mission">Missions :</span><br>
-Mise en place d’un banc de test à 9 GHz<br>
-Mesures VNA et analyseur de spectre<br>
-Identification de la fréquence de résonance<br>
-Exploitation des résultats et rédaction technique
-
+Banc de test 9 GHz<br>
+Mesures VNA et spectre<br>
+Fréquence de résonance<br>
+Exploitation et rédaction technique
 </div>
 
 </section>
@@ -301,7 +302,7 @@ LICENCE 3 Systèmes des Transmissions et Télécommunications – Faculté des S
 <div class="grid">
 
 <div class="box">
-<strong>Logiciels de conception et simulation industrielle</strong>
+<strong>Simulation RF</strong>
 <ul>
 <li>HFSS</li>
 <li>ADS (Keysight)</li>
@@ -340,14 +341,14 @@ Anglais : technique
 <h2>Atouts</h2>
 
 <div class="card">
-Ponctuel et autonome dans le travail<br>
+Ponctuel et autonome<br>
 Esprit d’équipe<br>
 Bon sens d’analyse
 </div>
 
 </section>
 
-<!-- CONTACTS -->
+<!-- CONTACT -->
 <section id="contacts">
 <h2>Contacts</h2>
 
